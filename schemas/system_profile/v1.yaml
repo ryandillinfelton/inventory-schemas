@@ -5,8 +5,6 @@ $defs:
   NestedObject:
     type: object
     description: An arbitrary object that doesn’t allow empty string keys.
-    # openapi spec does not support propertyNames, we will use a custom validator
-    # to validate x-propertyNames as propertyNames
     x-propertyNames:
       minLength: 1
     additionalProperties:
@@ -140,11 +138,11 @@ $defs:
         maxLength: 36
         example: 22cd8e39-13bb-4d02-8316-84b850dc5136
       number_of_cpus:
-        type: integer
+        type: string
       number_of_sockets:
-        type: integer
+        type: string
       cores_per_socket:
-        type: integer
+        type: string
       system_memory_bytes:
         type: integer
         format: int64
