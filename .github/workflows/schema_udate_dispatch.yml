@@ -24,5 +24,6 @@ jobs:
         with:
           owner: ryandillinfelton
           repo: xjoin-config
+          ref: master
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           workflow_file_name: update_schema.yaml
