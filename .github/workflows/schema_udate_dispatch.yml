@@ -19,11 +19,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Trigger xjoin-config job
+      - name: Trigger xjoin-operator job
         uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
           owner: ryandillinfelton
-          repo: xjoin-config
+          repo: xjoin-operator
           ref: master
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          workflow_file_name: update_schema.yaml
+          workflow_file_name: update_mapping.yaml
